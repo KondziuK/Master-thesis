@@ -1,0 +1,6 @@
+
+Nazwa:Rebecq2018_Article_EMVSEvent-BasedMulti-ViewStere
+Tytu³: EMVS: Event-Based Multi-View Stereo—3D Reconstruction with an Event Camera in Real-Time
+Autorzy: Henri Rebecq · Guillermo Gallego · Elias Mueggler · Davide Scaramuzza
+O czym: Ogólne informacje dotycz¹ce kamer zdarzeniowych oraz ich praktycznego zastosowania
+
