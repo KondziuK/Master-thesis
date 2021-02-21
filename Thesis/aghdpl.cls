@@ -313,7 +313,7 @@
 	language=autobib,
 	autolang=other,
 	% Zapisuj datę dostępu do strony WWW w formacie RRRR-MM-DD.
-	urldate=iso8601,
+	urldate=iso,
 	% Nie dodawaj numerów stron, na których występuje cytowanie.
 	backref=false,
 	% Podawaj ISBN.
@@ -324,7 +324,7 @@
 	% Ustawienia związane z polskimi normami dla bibliografii.
 	maxbibnames=3,
 	% Wybór silnika generowania bibliografii:
-%	backend=bibtex  % - jeżeli używamy BibTeX-a
+% 	backend=bibtex  % - jeżeli używamy BibTeX-a
 	backend=biber   % - jeżeli używamy biber-a
 ]{biblatex}
 
