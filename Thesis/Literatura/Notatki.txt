@@ -22,13 +22,13 @@ Notatki:
 
 -> Czujniki u¿ywaj¹ CMOS
 
--> Nie generuj¹ ramek, ale strumieñ danych - zdarzenia ('events')
+=> Nie generuj¹ ramek, ale strumieñ danych - zdarzenia ('events')
 
--> Ka¿dy piksel pracuje autonomicznie od innych, generuje zdarzenia zale¿ne od zmiany natê¿enia œwiat³a
+=> Ka¿dy piksel pracuje autonomicznie od innych, generuje zdarzenia zale¿ne od zmiany natê¿enia œwiat³a
 
--> Brak zmian <=> Brak danych
+=> Brak zmian <=> Brak danych
 
-->Zalety:
+=>Zalety:
 	> Brak rozmycia ruchu
 	> Bardzo du¿y zakres dynamiczny ('Dynamic range') >120 dB
 	> Bardzo ma³e opóŸnienie ('Latency') - zale¿y od iloœci zmian
@@ -45,17 +45,88 @@ Notatki:
 
 -> O wadach nie mówili... :\
 
--> Ka¿dy piksel daje informacjê w formacie XYT
+=> Ka¿dy piksel daje informacjê w formacie XYT
 	
 ----------------------------------------------------------------------------------------------
 
 ----------------------------------------------------------------------------------------------
-Nazwa: https://en.wikipedia.org/wiki/3D_reconstruction
+Nazwa: https://en.wikipedia.org/ /3D_reconstruction
 Tytu³: 3D reconstruction - Wikipedia
 Autorzy: God only knows
 O czym:	Rekonstrukcja 3D - co to, podstawowe metody
 Notatki:
+=> Rekonstrukcja 3D: proces uchwycenia kszta³tu i wygl¹du rzeczywistych obiektów. Proces mo¿na osi¹gn¹æ
+metodami aktywnymi lub pasywnymi. Jeœli pozwoli siê modelowi zmieniæ swój kszta³t w czasie,
+ okreœla siê to jako rekonstrukcjê niesztywn¹ lub przestrzenno-czasow¹
+
+-> Cel: kszta³t 3D, koordynaty ka¿dego jego punktu
+
+-> Metody aktywne: u¿ywaj¹c map g³êbi ('depth map') rekonstruuj¹ PROFIL 3D poprzez aproksymacjê numeryczn¹ 
+i buduj¹ model. W sposób aktywny oddzia³owuj¹ one na obiekt np. falami radiowymi, œwietlnymi
+(radar, lidar,sonar etc)
+
+=> Metody pasywne: Nie oddzia³owuj¹ na obiekt rekonstruowany, u¿ywaj¹ sensorów do zmierzenia 
+promieniowania odbitego albo wyemitowanego przez obiekt(same go nie generuj¹). Metody pasywne mo¿na zastosowaæ
+do szerszego studium przypadków. Typowo sensor jest to kamera (mamy zdjêcia, eventy).
+
+-> Metody pasywne dzielimy na monokularne('monocular') i stereowizyjne ('stereo vision').
+
+=> Metody monokularne opieraj¹ siê na jednym b¹dŸ wiêcej zdjêæ z jednego ujêcia (kamery). Korzysta z 
+charakterystyk 2D (sylwestki, tekstury, cieniowanie) by zmierzyæ kszta³t 3D. Metody to 'Shape-from-shading',
+'Photometric stereo' oraz 'shape-from-texture'
+
+-> Shape-from-shadowing: Analiza cienia przy u¿yciu refleksji Lambertowskiej ('Lambertian reflectance'),
+otrzymujemy mapê g³êbi.
+
+-> Photometric Stereo: Wykonujemy zdjêcia przy ró¿nych warunkach oœwietleniowych by uzyskaæ g³êbiê.
+
+-> Shape-from-texture: Zak³adamy, ¿e obiekt ma g³adk¹ powierzchniê pokryt¹ replikowany jednostkami tekstur
+(???)('replicated texture unit') a jego rzutowanie z 3D na 2D powoduje zniekszta³cenie i perspektywê.
+Zniekszta³cenie i perspektywa zmierzone na obrazach 2D daj¹ pewn¹ wskazówkê do odwrotnego rozwi¹zania g³êbi i uzyskania informacji o powierzchni obiektu
+
+
+=> Stereowizja: otrzymujemy geometryczne informacje 3D obiektu na podstawie wielu zdjêæ z dwóch kamer
+jednoczeœnie umieszczonych pod ró¿nymi k¹tami albo z jednej kamery z kilku ró¿nych ujêæ pod ró¿nymi k¹tami.
+-> Problem: Wiêkszoœæ algorytmów rekonstrukcji 3D jest zbyt powolna i trudna do u¿ycia w czasie rzeczywistym.
+-> Opisane metody (do dalszego researchu): Delaunay and alpha-shapes, Zero set Methods, VR Technique, Voxel Grid
+
 ----------------------------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------------------------
+Nazwa: https://en.wikipedia.org/wiki/Computer_stereo_vision
+Tytu³: Computer stereo vision
+Autorzy: God only knows
+O czym: Stereowizja
+Notatki:
+=> Stereowizja: ekstrakcja informacji 3D ze zdjêæ cyfrowych. Porównuj¹c dane o scenie z dwóch punktów
+widokowych, mo¿na uzyskaæ informacje 3D poprzez analizê pozycji wzglêdnych obiektu na dwóch zdjêciach.
+
+-> Porównuj¹c dwa zdjêcia uzyskujemy informacjê o relatywnej g³êbi ('relative depth') w formie mapy rozbie¿noœci ('disparity map') która koduje ró¿nice w horyzontalnych koordynatach odpowiadaj¹cych punktach
+obrazu. Wartoœci na tej mapie rozbie¿noœci s¹ odwrotnie proporcjonalne do g³êbi sceny w odpowiedniej lokalizacji piksela. 
+
+----------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------
+Nazwa: Stereowizja_pol_slonsko
+Tytu³: Metody stereowizyjne w analizie sk³adu ziarnowego
+Autorzy: Heyduk A
+O czym: Opis stereowizji
+Notatki:
+
+-> "Œwiat obserwowany jednym okiem jest p³aski, a zdolnoœæ do postrzegania wzajemnego po³o¿enia obiektów
+w przestrzenmi mo¿liwa jest tylko dziêki analizie wzajemnego po³o¿enia" - RIP cyclops
+
+-> Pe³nia odbioru glêbi mo¿liwa jest dopiero przy wykorzystaniu pary oczu (kamer)
+
+----------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
 
 ----------------------------------------------------------------------------------------------
 Nazwa: Konspekt rozszerzony 1 Rzutowanie, kalibracja i stereowizja
