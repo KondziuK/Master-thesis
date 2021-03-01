@@ -119,6 +119,81 @@ w przestrzenmi mo¿liwa jest tylko dziêki analizie wzajemnego po³o¿enia" - RIP cy
 
 -> Pe³nia odbioru glêbi mo¿liwa jest dopiero przy wykorzystaniu pary oczu (kamer)
 
+-> Punkt centralny rzutowania - punkt w którym przecinaj¹ siê promienie rzutuj¹ce - proste ³¹cz¹ce punkty z
+ich odpowiednikiem na p³saszczyŸnie kamery. Mówimy o tym w kontekœcie rzutu perspektywicznego 
+
+-> Punkt na p³aszczyŸnie podstaje jako punkt przeciêcia prostej ³¹cz¹cej punkt w przestrzeni i punkt centralny (O1/2)z p³aszczyzn¹ obrazu(S1/S2)
+
+-> prost¹ ³¹cz¹c¹ punkt centralny K1 z punktem centralnym K2 nazywamy prost¹ bazow¹ (baseline)
+
+->Punkty przeciêcia linii bazowej O1O2 z p³aszczyznami obrazów S1/S2 nazywamy punktami epipolarnymi (E1/E2)
+
+-> Dowolny punkt przestrzeni P wraz z punktami E1,E2 tworzy trójkê punktów wyznaczaj¹cych p³aszczyznê nazywan¹
+p³aszczyzn¹ epipolarn¹.
+
+-> Linie przeciêcia p³aszczyzny epipolarnej z p³aszczyznami obrazów S1 i S2 nazywa siê liniami epipolarnymi L1 i L2. 
+Linie te ³¹cz¹ obydwa obrazu punktów w obydwu kamerach z odpowiednimi punktami epipolarnymi E1 i E2
+
+-> Uproszczenie znaczne gdy osie optyczne obdwu JEDNAKOWYCH (ta sama ogniskowa i rozdzielczoœæ) kamer
+s¹ do siebie równoleg³e a obrazy S1 i S2 le¿¹ w jednej p³aszczyŸnie. Jest to uk³ad KANONICZNY
+
+
+
+----------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------
+Nazwa: Sterowizja3
+Tytu³:SYSTEM OBRAZOWANIA STEREOSKOPOWEGO SEKWENCJI SCEN TRÓJWYMIAROWYCH
+Autorzy: DARIUSZ RZESZOTARSKI
+O czym: Stereowizja
+Notatki:
+
+=>Stereowizja jest technika obrazowa umo¿liwiajaca wyznaczanie wspó³rzednych punktów sceny trójwymiarowej n 
+na podstawie ich obrazów 
+uzyskiwanych w co najmniej dwóch urzadzeniach rejestrujacych zwanych dalej kamerami
+
+=> Uk³ad kanoniczny:
+a) osie kamer s¹ równoleg³e
+b) wspó³rzêdne Z ognisk kamer s¹ takie same
+
+
+=> Linia epipolarna dla danego punktu pR (pL) z obrazu kamery prawej (lewej) jest linia bedaca obrazem w
+kamerze lewej (prawej) prostej wychodzacej z ogniska cR (cL) kamery prawej (lewej)
+i przechodzacej przez pR (pL).
+
+=>Dla ka¿dego niekanonicznego uk³adu kamer wszystkie linie epipolarne nie sa wzajemnie
+równoleg³e i przecinaja sie w jednym punkcie zwanym punktem epipolarnym
+
+-> Podstawowe zadanie - wyznaczenie problemu odpowiednioœci
+
+=> Zadanie odpowiednioœci - wyznaczenie wspó³rzêdnych rzutów punktu P na lew¹ i praw¹ kamerê
+
+-> W uk³adzie kanonicznym jest to prostsze gdy¿ wsp Y obydwu rzutów jest jednakowa
+
+-> Rozwi¹zaniem zadania odpowiednioœci jest wyznaczenie OBRAZU DYSPARYCJI (disparity) czyli ró¿nicy
+wspó³rzêdnych zwi¹zanych z wzajemnym przesuniêciem obrazów ka¿dego punktu przesttrzeni (X,Y,Z) w obu kamerach
+
+
+=> I tu nastêpuje masa wzorków, ca³kiem ³adnych...
+
+-> W praktycznych zastosowaniach ciê¿ko uzyskaæ kanoniczny uk³ad kamer. Mo¿na jednak stosuj¹c odpowiednie 
+rzutowanie, przekszta³ciæ wspó³rzêdne pary obrazów z uk³adu niekanonicznego do uk³adu kanonicznego. Nazywamy
+to REKTYFIKACJ¥ obrazu.
+
+-> W celu znalezienia pary odpowiednich macierzy przekszta³caj¹cych konieczne jest przeprowadzenie 
+kalibracji uk³adu steroewoizjnego ze wzglêdu na zewn¹trzne oraz wewnêtrzne parametry kamer
+
+-> Parametry zewnêtrzne kamery opisuje wektor T  okreœlaj¹cy przesuniêcie pomiêdzy uk³adem wsp
+zwi¹zanych z kamer¹ [Xc, Yc, Zc] a arbitralnie wybranym zewnêtrznym uk³adem wsp [X,Y,Z] oraz macierz obrotu
+R okreœlaj¹ca obrót pomiêdzy tymi osiami
+
+-> Znajomoœæ parametrów zewnêtrznych ka¿dej z kamer jest konieczna do korekcji zniekszta³ceñ geometrycznych 
+wprowadzanych przez uk³ady optyczne kamer. Mo¿na je podzieliæ na dwie grupy - pierwsza to parametry metryczne
+które s¹ dane w tzw. macierzy kamery. Do drugiej z kolei zalicza siê parametry okreœlaj¹ce zniekszta³cenia 
+geometryczne wprowadzone przez uk³ady optyczne kamer. Dzielimy je na radialne i tangencjalne.
+
+
+-> Potem hokus pokus czary mary i mamy macierze translacji (Ml i Mr) - nie napisali jak xD
 ----------------------------------------------------------------------------------------------
 
 
