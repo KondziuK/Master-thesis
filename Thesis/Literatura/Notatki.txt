@@ -1,11 +1,11 @@
-**lasciate ogni speranza, voi chíentrate**
+Ôªø**lasciate ogni speranza, voi ch‚Äôentrate**
 
 
 
-Notatki dotyczπce przejrzanej literatury etc etc
-G≥Ûwne ürÛd≥o wiedzy: https://github.com/uzh-rpg/event-based_vision_resources#depth-estimation
+Notatki dotyczƒÖce przejrzanej literatury etc etc
+G≈Ç√≥wne ≈∫r√≥d≈Ço wiedzy: https://github.com/uzh-rpg/event-based_vision_resources#depth-estimation
 
-gitignore (Ze wzglÍdÛw prawnych):
+gitignore (Ze wzglƒôd√≥w prawnych):
 *.pdf
 *.mp4
 
@@ -13,81 +13,81 @@ gitignore (Ze wzglÍdÛw prawnych):
 
 ----------------------------------------------------------------------------------------------
 Nazwa: Prophesee_FRAMOS_Technical_Summit_2021_Handout & FRAMOS_2021_PROPHESEE
-Tytu≥: Europe Framos Technical Summit 2021
+Tytu≈Ç: Europe Framos Technical Summit 2021
 Autorzy: Philippe Berger
 O czym: Konferencja o kamerach zdarzeniowych
 Notatki:
 
--> MÛzg reaguje na ruch, aktualizuje informacje
+-> M√≥zg reaguje na ruch, aktualizuje informacje
 
--> Czujniki uøywajπ CMOS
+-> Czujniki u≈ºywajƒÖ CMOS
 
-=> Nie generujπ ramek, ale strumieÒ danych - zdarzenia ('events')
+=> Nie generujƒÖ ramek, ale strumie≈Ñ danych - zdarzenia ('events')
 
-=> Kaødy piksel pracuje autonomicznie od innych, generuje zdarzenia zaleøne od zmiany natÍøenia úwiat≥a
+=> Ka≈ºdy piksel pracuje autonomicznie od innych, generuje zdarzenia zale≈ºne od zmiany natƒô≈ºenia ≈õwiat≈Ça
 
 => Brak zmian <=> Brak danych
 
 =>Zalety:
 	> Brak rozmycia ruchu
-	> Bardzo duøy zakres dynamiczny ('Dynamic range') >120 dB
-	> Bardzo ma≥e opÛünienie ('Latency') - zaleøy od iloúci zmian
+	> Bardzo du≈ºy zakres dynamiczny ('Dynamic range') >120 dB
+	> Bardzo ma≈Çe op√≥≈∫nienie ('Latency') - zale≈ºy od ilo≈õci zmian
 
 
 --offtopic------	
--> Dynamic range - stosunek pomiÍdzy najciemniejszym a najjaúniejszym tonem jaki moøna uzyskaÊ
+-> Dynamic range - stosunek pomiƒôdzy najciemniejszym a najja≈õniejszym tonem jaki mo≈ºna uzyskaƒá
 
--> ton obrazu (fototon) - funkcja iloúci promieniowania odbitego od odbiektu, ktÛre dotar≥o do sensora i zosta≥o zarejestrowane.
+-> ton obrazu (fototon) - funkcja ilo≈õci promieniowania odbitego od odbiektu, kt√≥re dotar≈Ço do sensora i zosta≈Ço zarejestrowane.
 
 ----------------
 
--> Duøo ciekawych zastosowaÒ
+-> Du≈ºo ciekawych zastosowa≈Ñ
 
--> O wadach nie mÛwili... :\
+-> O wadach nie m√≥wili... :\
 
-=> Kaødy piksel daje informacjÍ w formacie XYT
+=> Ka≈ºdy piksel daje informacjƒô w formacie XYT
 	
 ----------------------------------------------------------------------------------------------
 
 ----------------------------------------------------------------------------------------------
 Nazwa: https://en.wikipedia.org/ /3D_reconstruction
-Tytu≥: 3D reconstruction - Wikipedia
+Tytu≈Ç: 3D reconstruction - Wikipedia
 Autorzy: God only knows
 O czym:	Rekonstrukcja 3D - co to, podstawowe metody
 Notatki:
-=> Rekonstrukcja 3D: proces uchwycenia kszta≥tu i wyglπdu rzeczywistych obiektÛw. Proces moøna osiπgnπÊ
-metodami aktywnymi lub pasywnymi. Jeúli pozwoli siÍ modelowi zmieniÊ swÛj kszta≥t w czasie,
- okreúla siÍ to jako rekonstrukcjÍ niesztywnπ lub przestrzenno-czasowπ
+=> Rekonstrukcja 3D: proces uchwycenia kszta≈Çtu i wyglƒÖdu rzeczywistych obiekt√≥w. Proces mo≈ºna osiƒÖgnƒÖƒá
+metodami aktywnymi lub pasywnymi. Je≈õli pozwoli siƒô modelowi zmieniƒá sw√≥j kszta≈Çt w czasie,
+ okre≈õla siƒô to jako rekonstrukcjƒô niesztywnƒÖ lub przestrzenno-czasowƒÖ
 
--> Cel: kszta≥t 3D, koordynaty kaødego jego punktu
+-> Cel: kszta≈Çt 3D, koordynaty ka≈ºdego jego punktu
 
--> Metody aktywne: uøywajπc map g≥Íbi ('depth map') rekonstruujπ PROFIL 3D poprzez aproksymacjÍ numerycznπ 
-i budujπ model. W sposÛb aktywny oddzia≥owujπ one na obiekt np. falami radiowymi, úwietlnymi
+-> Metody aktywne: u≈ºywajƒÖc map g≈Çƒôbi ('depth map') rekonstruujƒÖ PROFIL 3D poprzez aproksymacjƒô numerycznƒÖ 
+i budujƒÖ model. W spos√≥b aktywny oddzia≈ÇowujƒÖ one na obiekt np. falami radiowymi, ≈õwietlnymi
 (radar, lidar,sonar etc)
 
-=> Metody pasywne: Nie oddzia≥owujπ na obiekt rekonstruowany, uøywajπ sensorÛw do zmierzenia 
-promieniowania odbitego albo wyemitowanego przez obiekt(same go nie generujπ). Metody pasywne moøna zastosowaÊ
-do szerszego studium przypadkÛw. Typowo sensor jest to kamera (mamy zdjÍcia, eventy).
+=> Metody pasywne: Nie oddzia≈ÇowujƒÖ na obiekt rekonstruowany, u≈ºywajƒÖ sensor√≥w do zmierzenia 
+promieniowania odbitego albo wyemitowanego przez obiekt(same go nie generujƒÖ). Metody pasywne mo≈ºna zastosowaƒá
+do szerszego studium przypadk√≥w. Typowo sensor jest to kamera (mamy zdjƒôcia, eventy).
 
 -> Metody pasywne dzielimy na monokularne('monocular') i stereowizyjne ('stereo vision').
 
-=> Metody monokularne opierajπ siÍ na jednym bπdü wiÍcej zdjÍÊ z jednego ujÍcia (kamery). Korzysta z 
-charakterystyk 2D (sylwestki, tekstury, cieniowanie) by zmierzyÊ kszta≥t 3D. Metody to 'Shape-from-shading',
+=> Metody monokularne opierajƒÖ siƒô na jednym bƒÖd≈∫ wiƒôcej zdjƒôƒá z jednego ujƒôcia (kamery). Korzysta z 
+charakterystyk 2D (sylwestki, tekstury, cieniowanie) by zmierzyƒá kszta≈Çt 3D. Metody to 'Shape-from-shading',
 'Photometric stereo' oraz 'shape-from-texture'
 
--> Shape-from-shadowing: Analiza cienia przy uøyciu refleksji Lambertowskiej ('Lambertian reflectance'),
-otrzymujemy mapÍ g≥Íbi.
+-> Shape-from-shadowing: Analiza cienia przy u≈ºyciu refleksji Lambertowskiej ('Lambertian reflectance'),
+otrzymujemy mapƒô g≈Çƒôbi.
 
--> Photometric Stereo: Wykonujemy zdjÍcia przy rÛønych warunkach oúwietleniowych by uzyskaÊ g≥ÍbiÍ.
+-> Photometric Stereo: Wykonujemy zdjƒôcia przy r√≥≈ºnych warunkach o≈õwietleniowych by uzyskaƒá g≈Çƒôbiƒô.
 
--> Shape-from-texture: Zak≥adamy, øe obiekt ma g≥adkπ powierzchniÍ pokrytπ replikowany jednostkami tekstur
-(???)('replicated texture unit') a jego rzutowanie z 3D na 2D powoduje zniekszta≥cenie i perspektywÍ.
-Zniekszta≥cenie i perspektywa zmierzone na obrazach 2D dajπ pewnπ wskazÛwkÍ do odwrotnego rozwiπzania g≥Íbi i uzyskania informacji o powierzchni obiektu
+-> Shape-from-texture: Zak≈Çadamy, ≈ºe obiekt ma g≈ÇadkƒÖ powierzchniƒô pokrytƒÖ replikowany jednostkami tekstur
+(???)('replicated texture unit') a jego rzutowanie z 3D na 2D powoduje zniekszta≈Çcenie i perspektywƒô.
+Zniekszta≈Çcenie i perspektywa zmierzone na obrazach 2D dajƒÖ pewnƒÖ wskaz√≥wkƒô do odwrotnego rozwiƒÖzania g≈Çƒôbi i uzyskania informacji o powierzchni obiektu
 
 
-=> Stereowizja: otrzymujemy geometryczne informacje 3D obiektu na podstawie wielu zdjÍÊ z dwÛch kamer
-jednoczeúnie umieszczonych pod rÛønymi kπtami albo z jednej kamery z kilku rÛønych ujÍÊ pod rÛønymi kπtami.
--> Problem: WiÍkszoúÊ algorytmÛw rekonstrukcji 3D jest zbyt powolna i trudna do uøycia w czasie rzeczywistym.
+=> Stereowizja: otrzymujemy geometryczne informacje 3D obiektu na podstawie wielu zdjƒôƒá z dw√≥ch kamer
+jednocze≈õnie umieszczonych pod r√≥≈ºnymi kƒÖtami albo z jednej kamery z kilku r√≥≈ºnych ujƒôƒá pod r√≥≈ºnymi kƒÖtami.
+-> Problem: Wiƒôkszo≈õƒá algorytm√≥w rekonstrukcji 3D jest zbyt powolna i trudna do u≈ºycia w czasie rzeczywistym.
 -> Opisane metody (do dalszego researchu): Delaunay and alpha-shapes, Zero set Methods, VR Technique, Voxel Grid
 
 ----------------------------------------------------------------------------------------------
@@ -95,47 +95,47 @@ jednoczeúnie umieszczonych pod rÛønymi kπtami albo z jednej kamery z kilku rÛøny
 
 ----------------------------------------------------------------------------------------------
 Nazwa: https://en.wikipedia.org/wiki/Computer_stereo_vision
-Tytu≥: Computer stereo vision
+Tytu≈Ç: Computer stereo vision
 Autorzy: God only knows
 O czym: Stereowizja
 Notatki:
-=> Stereowizja: ekstrakcja informacji 3D ze zdjÍÊ cyfrowych. PorÛwnujπc dane o scenie z dwÛch punktÛw
-widokowych, moøna uzyskaÊ informacje 3D poprzez analizÍ pozycji wzglÍdnych obiektu na dwÛch zdjÍciach.
+=> Stereowizja: ekstrakcja informacji 3D ze zdjƒôƒá cyfrowych. Por√≥wnujƒÖc dane o scenie z dw√≥ch punkt√≥w
+widokowych, mo≈ºna uzyskaƒá informacje 3D poprzez analizƒô pozycji wzglƒôdnych obiektu na dw√≥ch zdjƒôciach.
 
--> PorÛwnujπc dwa zdjÍcia uzyskujemy informacjÍ o relatywnej g≥Íbi ('relative depth') w formie mapy rozbieønoúci ('disparity map') ktÛra koduje rÛønice w horyzontalnych koordynatach odpowiadajπcych punktach
-obrazu. Wartoúci na tej mapie rozbieønoúci sπ odwrotnie proporcjonalne do g≥Íbi sceny w odpowiedniej lokalizacji piksela. 
+-> Por√≥wnujƒÖc dwa zdjƒôcia uzyskujemy informacjƒô o relatywnej g≈Çƒôbi ('relative depth') w formie mapy rozbie≈ºno≈õci ('disparity map') kt√≥ra koduje r√≥≈ºnice w horyzontalnych koordynatach odpowiadajƒÖcych punktach
+obrazu. Warto≈õci na tej mapie rozbie≈ºno≈õci sƒÖ odwrotnie proporcjonalne do g≈Çƒôbi sceny w odpowiedniej lokalizacji piksela. 
 
 ----------------------------------------------------------------------------------------------
 
 ----------------------------------------------------------------------------------------------
 Nazwa: Stereowizja_pol_slonsko
-Tytu≥: Metody stereowizyjne w analizie sk≥adu ziarnowego
+Tytu≈Ç: Metody stereowizyjne w analizie sk≈Çadu ziarnowego
 Autorzy: Heyduk A
 O czym: Opis stereowizji
 Notatki:
 
--> "åwiat obserwowany jednym okiem jest p≥aski, a zdolnoúÊ do postrzegania wzajemnego po≥oøenia obiektÛw
-w przestrzenmi moøliwa jest tylko dziÍki analizie wzajemnego po≥oøenia" - RIP cyclops
+-> "≈öwiat obserwowany jednym okiem jest p≈Çaski, a zdolno≈õƒá do postrzegania wzajemnego po≈Ço≈ºenia obiekt√≥w
+w przestrzenmi mo≈ºliwa jest tylko dziƒôki analizie wzajemnego po≈Ço≈ºenia" - RIP cyclops
 
--> Pe≥nia odbioru glÍbi moøliwa jest dopiero przy wykorzystaniu pary oczu (kamer)
+-> Pe≈Çnia odbioru glƒôbi mo≈ºliwa jest dopiero przy wykorzystaniu pary oczu (kamer)
 
--> Punkt centralny rzutowania - punkt w ktÛrym przecinajπ siÍ promienie rzutujπce - proste ≥πczπce punkty z
-ich odpowiednikiem na p≥saszczyünie kamery. MÛwimy o tym w kontekúcie rzutu perspektywicznego 
+-> Punkt centralny rzutowania - punkt w kt√≥rym przecinajƒÖ siƒô promienie rzutujƒÖce - proste ≈ÇƒÖczƒÖce punkty z
+ich odpowiednikiem na p≈Çsaszczy≈∫nie kamery. M√≥wimy o tym w kontek≈õcie rzutu perspektywicznego 
 
--> Punkt na p≥aszczyünie podstaje jako punkt przeciÍcia prostej ≥πczπcej punkt w przestrzeni i punkt centralny (O1/2)z p≥aszczyznπ obrazu(S1/S2)
+-> Punkt na p≈Çaszczy≈∫nie podstaje jako punkt przeciƒôcia prostej ≈ÇƒÖczƒÖcej punkt w przestrzeni i punkt centralny (O1/2)z p≈ÇaszczyznƒÖ obrazu(S1/S2)
 
--> prostπ ≥πczπcπ punkt centralny K1 z punktem centralnym K2 nazywamy prostπ bazowπ (baseline)
+-> prostƒÖ ≈ÇƒÖczƒÖcƒÖ punkt centralny K1 z punktem centralnym K2 nazywamy prostƒÖ bazowƒÖ (baseline)
 
-->Punkty przeciÍcia linii bazowej O1O2 z p≥aszczyznami obrazÛw S1/S2 nazywamy punktami epipolarnymi (E1/E2)
+->Punkty przeciƒôcia linii bazowej O1O2 z p≈Çaszczyznami obraz√≥w S1/S2 nazywamy punktami epipolarnymi (E1/E2)
 
--> Dowolny punkt przestrzeni P wraz z punktami E1,E2 tworzy trÛjkÍ punktÛw wyznaczajπcych p≥aszczyznÍ nazywanπ
-p≥aszczyznπ epipolarnπ.
+-> Dowolny punkt przestrzeni P wraz z punktami E1,E2 tworzy tr√≥jkƒô punkt√≥w wyznaczajƒÖcych p≈Çaszczyznƒô nazywanƒÖ
+p≈ÇaszczyznƒÖ epipolarnƒÖ.
 
--> Linie przeciÍcia p≥aszczyzny epipolarnej z p≥aszczyznami obrazÛw S1 i S2 nazywa siÍ liniami epipolarnymi L1 i L2. 
-Linie te ≥πczπ obydwa obrazu punktÛw w obydwu kamerach z odpowiednimi punktami epipolarnymi E1 i E2
+-> Linie przeciƒôcia p≈Çaszczyzny epipolarnej z p≈Çaszczyznami obraz√≥w S1 i S2 nazywa siƒô liniami epipolarnymi L1 i L2. 
+Linie te ≈ÇƒÖczƒÖ obydwa obrazu punkt√≥w w obydwu kamerach z odpowiednimi punktami epipolarnymi E1 i E2
 
--> Uproszczenie znaczne gdy osie optyczne obdwu JEDNAKOWYCH (ta sama ogniskowa i rozdzielczoúÊ) kamer
-sπ do siebie rÛwnoleg≥e a obrazy S1 i S2 leøπ w jednej p≥aszczyünie. Jest to uk≥ad KANONICZNY
+-> Uproszczenie znaczne gdy osie optyczne obdwu JEDNAKOWYCH (ta sama ogniskowa i rozdzielczo≈õƒá) kamer
+sƒÖ do siebie r√≥wnoleg≈Çe a obrazy S1 i S2 le≈ºƒÖ w jednej p≈Çaszczy≈∫nie. Jest to uk≈Çad KANONICZNY
 
 
 
@@ -143,86 +143,162 @@ sπ do siebie rÛwnoleg≥e a obrazy S1 i S2 leøπ w jednej p≥aszczyünie. Jest to uk≥
 
 ----------------------------------------------------------------------------------------------
 Nazwa: Sterowizja3
-Tytu≥:SYSTEM OBRAZOWANIA STEREOSKOPOWEGO SEKWENCJI SCEN TR”JWYMIAROWYCH
+Tytu≈Ç:SYSTEM OBRAZOWANIA STEREOSKOPOWEGO SEKWENCJI SCEN TR√ìJWYMIAROWYCH
 Autorzy: DARIUSZ RZESZOTARSKI
 O czym: Stereowizja
 Notatki:
 
-=>Stereowizja jest technika obrazowa umoøliwiajaca wyznaczanie wspÛ≥rzednych punktÛw sceny trÛjwymiarowej n 
-na podstawie ich obrazÛw 
-uzyskiwanych w co najmniej dwÛch urzadzeniach rejestrujacych zwanych dalej kamerami
+=>Stereowizja jest technika obrazowa umo≈ºliwiajaca wyznaczanie wsp√≥≈Çrzednych punkt√≥w sceny tr√≥jwymiarowej n 
+na podstawie ich obraz√≥w 
+uzyskiwanych w co najmniej dw√≥ch urzadzeniach rejestrujacych zwanych dalej kamerami
 
-=> Uk≥ad kanoniczny:
-a) osie kamer sπ rÛwnoleg≥e
-b) wspÛ≥rzÍdne Z ognisk kamer sπ takie same
+=> Uk≈Çad kanoniczny:
+a) osie kamer sƒÖ r√≥wnoleg≈Çe
+b) wsp√≥≈Çrzƒôdne Z ognisk kamer sƒÖ takie same
 
 
 => Linia epipolarna dla danego punktu pR (pL) z obrazu kamery prawej (lewej) jest linia bedaca obrazem w
 kamerze lewej (prawej) prostej wychodzacej z ogniska cR (cL) kamery prawej (lewej)
 i przechodzacej przez pR (pL).
 
-=>Dla kaødego niekanonicznego uk≥adu kamer wszystkie linie epipolarne nie sa wzajemnie
-rÛwnoleg≥e i przecinaja sie w jednym punkcie zwanym punktem epipolarnym
+=>Dla ka≈ºdego niekanonicznego uk≈Çadu kamer wszystkie linie epipolarne nie sa wzajemnie
+r√≥wnoleg≈Çe i przecinaja sie w jednym punkcie zwanym punktem epipolarnym
 
--> Podstawowe zadanie - wyznaczenie problemu odpowiednioúci
+-> Podstawowe zadanie - wyznaczenie problemu odpowiednio≈õci
 
-=> Zadanie odpowiednioúci - wyznaczenie wspÛ≥rzÍdnych rzutÛw punktu P na lewπ i prawπ kamerÍ
+=> Zadanie odpowiednio≈õci - wyznaczenie wsp√≥≈Çrzƒôdnych rzut√≥w punktu P na lewƒÖ i prawƒÖ kamerƒô
 
--> W uk≥adzie kanonicznym jest to prostsze gdyø wsp Y obydwu rzutÛw jest jednakowa
+-> W uk≈Çadzie kanonicznym jest to prostsze gdy≈º wsp Y obydwu rzut√≥w jest jednakowa
 
--> Rozwiπzaniem zadania odpowiednioúci jest wyznaczenie OBRAZU DYSPARYCJI (disparity) czyli rÛønicy
-wspÛ≥rzÍdnych zwiπzanych z wzajemnym przesuniÍciem obrazÛw kaødego punktu przesttrzeni (X,Y,Z) w obu kamerach
+-> RozwiƒÖzaniem zadania odpowiednio≈õci jest wyznaczenie OBRAZU DYSPARYCJI (disparity) czyli r√≥≈ºnicy
+wsp√≥≈Çrzƒôdnych zwiƒÖzanych z wzajemnym przesuniƒôciem obraz√≥w ka≈ºdego punktu przesttrzeni (X,Y,Z) w obu kamerach
 
 
-=> I tu nastÍpuje masa wzorkÛw, ca≥kiem ≥adnych...
+=> I tu nastƒôpuje masa wzork√≥w, ca≈Çkiem ≈Çadnych...
 
--> W praktycznych zastosowaniach ciÍøko uzyskaÊ kanoniczny uk≥ad kamer. Moøna jednak stosujπc odpowiednie 
-rzutowanie, przekszta≥ciÊ wspÛ≥rzÍdne pary obrazÛw z uk≥adu niekanonicznego do uk≥adu kanonicznego. Nazywamy
-to REKTYFIKACJ• obrazu.
+-> W praktycznych zastosowaniach ciƒô≈ºko uzyskaƒá kanoniczny uk≈Çad kamer. Mo≈ºna jednak stosujƒÖc odpowiednie 
+rzutowanie, przekszta≈Çciƒá wsp√≥≈Çrzƒôdne pary obraz√≥w z uk≈Çadu niekanonicznego do uk≈Çadu kanonicznego. Nazywamy
+to REKTYFIKACJƒÑ obrazu.
 
--> W celu znalezienia pary odpowiednich macierzy przekszta≥cajπcych konieczne jest przeprowadzenie 
-kalibracji uk≥adu steroewoizjnego ze wzglÍdu na zewnπtrzne oraz wewnÍtrzne parametry kamer
+-> W celu znalezienia pary odpowiednich macierzy przekszta≈ÇcajƒÖcych konieczne jest przeprowadzenie 
+kalibracji uk≈Çadu steroewoizjnego ze wzglƒôdu na zewnƒÖtrzne oraz wewnƒôtrzne parametry kamer
 
--> Parametry zewnÍtrzne kamery opisuje wektor T  okreúlajπcy przesuniÍcie pomiÍdzy uk≥adem wsp
-zwiπzanych z kamerπ [Xc, Yc, Zc] a arbitralnie wybranym zewnÍtrznym uk≥adem wsp [X,Y,Z] oraz macierz obrotu
-R okreúlajπca obrÛt pomiÍdzy tymi osiami
+-> Parametry zewnƒôtrzne kamery opisuje wektor T  okre≈õlajƒÖcy przesuniƒôcie pomiƒôdzy uk≈Çadem wsp
+zwiƒÖzanych z kamerƒÖ [Xc, Yc, Zc] a arbitralnie wybranym zewnƒôtrznym uk≈Çadem wsp [X,Y,Z] oraz macierz obrotu
+R okre≈õlajƒÖca obr√≥t pomiƒôdzy tymi osiami
 
--> ZnajomoúÊ parametrÛw zewnÍtrznych kaødej z kamer jest konieczna do korekcji zniekszta≥ceÒ geometrycznych 
-wprowadzanych przez uk≥ady optyczne kamer. Moøna je podzieliÊ na dwie grupy - pierwsza to parametry metryczne
-ktÛre sπ dane w tzw. macierzy kamery. Do drugiej z kolei zalicza siÍ parametry okreúlajπce zniekszta≥cenia 
-geometryczne wprowadzone przez uk≥ady optyczne kamer. Dzielimy je na radialne i tangencjalne.
+-> Znajomo≈õƒá parametr√≥w zewnƒôtrznych ka≈ºdej z kamer jest konieczna do korekcji zniekszta≈Çce≈Ñ geometrycznych 
+wprowadzanych przez uk≈Çady optyczne kamer. Mo≈ºna je podzieliƒá na dwie grupy - pierwsza to parametry metryczne
+kt√≥re sƒÖ dane w tzw. macierzy kamery. Do drugiej z kolei zalicza siƒô parametry okre≈õlajƒÖce zniekszta≈Çcenia 
+geometryczne wprowadzone przez uk≈Çady optyczne kamer. Dzielimy je na radialne i tangencjalne.
 
 
 -> Potem hokus pokus czary mary i mamy macierze translacji (Ml i Mr) - nie napisali jak xD
 ----------------------------------------------------------------------------------------------
 
 
-
-
-
-
-
-
 ----------------------------------------------------------------------------------------------
 Nazwa: Konspekt rozszerzony 1 Rzutowanie, kalibracja i stereowizja
-Tytu≥: Rzutowanie, kalibracja, stereowizja
+Tytu≈Ç: Rzutowanie, kalibracja, stereowizja
 Autorzy: Rotter
 O czym: Opis stereowizji
 Notatki:
+
+-> wsp√≥≈Çrzƒôdne jednorodne unormowane - [X Y Z 1]^T - poprzez dodanie dodatkowej wsp√≥≈Çrzƒônej uzyskujemy
+mo≈ºliwo≈õƒá macierzowego zapisu ka≈ºdej transformacji, w tym przesuniƒôcia (translacji), co pozwala
+na uproszczone sk≈Çadanie przekszta≈Çce≈Ñ
+-> PRzej≈õcia: zewnƒôtrzny uk≈Çad wsp -> uk≈Çad wsp kamery -> uk≈Çad p≈Çaszczyzny obrazowej -> wsp pikselowe ->
+ew korekcja
+
+-> Mapa dysparycji - mapa obrazujƒÖca dypsarycjƒô czyli r√≥≈ºnicƒô w odleg≈Ço≈õciach punkt√≥w na obydwu kamerach 
+(im bli≈ºej dany obiekt tym ja≈õniejszy - wiƒôksza r√≥≈ºnica pomiƒôdzy obydwoma kamerami)
+
 ----------------------------------------------------------------------------------------------
 
+----------------------------------------------------------------------------------------------
+Nazwa: Peter_Hilman_Stereo_Vision
+Tytu≈Ç: White Paper: Camera Calibration and Stereo Vision
+Autorzy: Peter Hilman
+O czym: Sterowizja
+Notatki:
+-> Najwa≈ºniejsze - sekcja 4 - 3D recovery
+-> Bardzo dobra instrukcja - no najlepszy dzisiaj
+----------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------
+Nazwa: EventVisionSurvey
+Tytu≈Ç: Event-based Vision: A Survey
+Autorzy: Guillermo Gallego, Tobi Delbr¬®uck, Garrick Orchard, Chiara Bartolozzi, Brian Taba, Andrea Censi,
+Stefan Leutenegger, Andrew J. Davison, J¬®org Conradt, Kostas Daniilidis, Davide Scaramuzza
+O czym:  Og√≥lne informacje dotyczƒÖce kamer zdarzeniowych oraz ich praktycznego zastosowania
+Notatki:
+-> Firmy produkujƒÖce - Samsung, Prophesee
+
+=> Output kamery: zdarzenie (czas, lokalizacja, znak zmiany)
+=> Zalety: brak motion blur, b.du≈ºe HDR(High Dynamic Range) - 140db vs 60 db, ma≈Ça prƒÖdo≈ºerno≈õƒá, ma≈Ça latencja
+
+-> Ka≈ºdy piksel dzia≈Ça niezale≈ºnie od pozosta≈Çych
+
+-> Dzia≈Çamy na skali logarytmicznej
+
+=> DVS - Dynamic Vision Sensor
+
+-> Designs - DVS/ATIS/DAVIS, ale w sumie na wszystkie m√≥wimy DVS
+
+=> ZMIANA PARADYGMATU xD ,problemy:
+1) Output kamer jest asynchroniczny i rzadki
+2) Problem z o≈õwietleniem - nie tylko zmiana o≈õwietlenia sceny, ale tak≈ºe obecny i przesz≈Çy ruch wzglƒôdny 
+kamery i sceny
+3) Problem z szumem i efektami dynamicznymi 
+
+=> Zdarzenia powodujƒÖ przesuwajƒÖce siƒô krawƒôdzie
+
+=> W zale≈ºno≈õci od ilo≈õci zdarze≈Ñ przetwarzanych r√≥wnocze≈õnie rozr√≥≈ºniamy dwie kategorie stosowanych algorytm√≥w:
+1) Metody operujƒÖce 'event-by-event basis' gdzie stan systemy (estymowane niewiadome) mo≈ºe siƒô zmieniƒá z 
+nadej≈õciem pojedynczego zdarzenia a tym samym osiƒÖga  najmniejszƒÖ latencjƒô 
+2) Metody operujƒÖce na paczkach zdarze≈Ñ kt√≥re wprowadzajƒÖ pewne op√≥≈∫nienia
+
+=> Sposoby reprezentacji zdarze≈Ñ:
+1) Pojedyncze zdarzenia (indyvidual event) - algorytmy event-by-event np. filtry probabilistyczne (???) albo Spiking Neural Networks (ACHTUNG ACHTUNG!!! SNN)
+PosiadajƒÖ one dodatkowe informacje pozyskane z poprzednich zdarze≈Ñ albo z dodatkowej wiedzy
+2) Pakiety zdarze≈Ñ (Event packet) -  pakiety w czaso-przestrzennym sƒÖsiedztwie mogƒÖ byƒá przetwarzane razem 
+3) Zdarzeniowa ramka albo histogram 2D (Event frame/image or 2D histogram) -
+4) Przestrze≈Ñ czasowa (Time surface)
+5) siatka wokseli (Voxel grid) - Woksele to piksele w 3D
+6) Zestaw punkt√≥w 3D (3D point set) - mamy X,Y,T wiƒôc mo≈ºna przedstawiƒá w przestrzeni geometrycznej
+7) Punkty na p≈Çaszczy≈∫nie obrazu (Points set on image plane)
+8) Obraz zdarzenia z kompensacjƒÖ ruch (Motion-compensated event image) - w zasadzie to krawƒôdzie 
+9) Zrekonstruowany obraz (Reconstructed images)
+
+=> Spiking Neural Networks SNN:
+TO DO
+
+=> 3D reconstruction. Monocular and Stereo:
+- to szerokie pole (mƒÖdre s≈Çowa)
+A) Instanteous Stereo:
+U≈ºywamy zdarze≈Ñ w bardzo kr√≥tkim czasie (spos√≥b per-event basis) z 2 lub wiƒôcj sztywno umocowanych
+ zsynchronizowanych kamer. MajƒÖ one wsp√≥lny zegar. RozwiƒÖzanie klasyczne - rozwiƒÖzujemy korespondencjƒô stereo
+ a potem korzystamy z triangulacji (technika polegajƒÖca na rozbicu bardziej z≈Ço≈ºonych powierzchni na tr√≥jkƒÖty)
+ 
+B) Multi-Perspective Panoramas
+C) Monocular Depth Estimation
+D)Stereo Depth for SLAM
+E)Depth Estimation using Structured Light
 
 
-
-
-
+----------------------------------------------------------------------------------------------
 
 ----------------------------------------------------------------------------------------------
 Nazwa:Rebecq2018_Article_EMVSEvent-BasedMulti-ViewStere
-Tytu≥: EMVS: Event-Based Multi-View Stereoó3D Reconstruction with an Event Camera in Real-Time
-Autorzy: Henri Rebecq ∑ Guillermo Gallego ∑ Elias Mueggler ∑ Davide Scaramuzza
-O czym: OgÛlne informacje dotyczπce kamer zdarzeniowych oraz ich praktycznego zastosowania
+Tytu≈Ç: EMVS: Event-Based Multi-View Stereo‚Äî3D Reconstruction with an Event Camera in Real-Time
+Autorzy: Henri Rebecq ¬∑ Guillermo Gallego ¬∑ Elias Mueggler ¬∑ Davide Scaramuzza
+O czym: Rekonstrukcja 3D przy u≈ºyciu kamer zdarzeniowych (
 Notatki:
+ => POJEDYNCZA KAMERA ZDARZENIOWA
+ -> U≈ºywajƒÖ EMVS (Event Based Multi View Stereo)
+ - > Multi View Stereo - U≈ºycie wiƒôcej ni≈º dw√≥ch obraz√≥w
+
+ 
 ----------------------------------------------------------------------------------------------
 
 
@@ -232,7 +308,7 @@ Notatki:
 
 ----------------------------------------------------------------------------------------------
 Nazwa: 
-Tytu≥:
+Tytu≈Ç:
 Autorzy:
 O czym:
 Notatki:
