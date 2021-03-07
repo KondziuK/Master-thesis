@@ -301,12 +301,29 @@ Notatki:
  
 ----------------------------------------------------------------------------------------------
 
-
-
-
-
-
 ----------------------------------------------------------------------------------------------
+Nazwa: https://www.frontiersin.org/articles/10.3389/fnins.2018.00774/full
+Tytuł: Deep Learning With Spiking Neurons: Opportunities and Challenges
+Autorzy:  Michael Pfeiffer and Thomas Pfeil
+O czym: Spiking Neuron Networks
+Notatki:
+
+-> Główna różnica - neurony biologiczne działają z asynchronicznymi pikami które sygnalizują
+nadejście charakterystycznego zdarzenia a sztuczne to nieliniowe funkcje ciągłe operujące na 
+wspólnym zegarze
+
+-> Sieci neurone nazywamy głębokimi gdy mają co najmniej dwie warstwy ukryte
+
+-> W SNN neurony wymieniają informacje poprzez piki ('spikes'). Z założenia są to zdarzenia, toteż
+przetwarzanie informacji sprowadza się do dwóch czynników: czasu (
+częstotliwości wypalania, względne taktowanie impulsów przed i postsynaptycznych oraz określone wzorce wystrzeliwania )
+oraz tożsamość użytych synaps, tj. które neurony są połączone, czy synapsa jest pobudzająca, 
+czy hamująca, siła synaps i możliwa krótkoterminowa plastyczność lub efekty modulacyjne. 
+
+=> Są EVENT -BASED urra!!!
+----------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
 Nazwa: 
 Tytuł:
 Autorzy:
