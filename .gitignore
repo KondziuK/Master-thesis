@@ -1,2 +1,5 @@
 *.pdf
 *.mp4
+*ckpt
+*avi
+*mov
