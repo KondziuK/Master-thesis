@@ -301,6 +301,27 @@ Notatki:
  
 ----------------------------------------------------------------------------------------------
 
+---------------------------------------------------------------------------------------------
+Nazwa: https://www.youtube.com/watch?v=9mYTbZM9odc
+Tytuł: Misha Mahowald’s Beautiful Stereo Chip - Tobi Delbruck- 2020 Telluride Neuromorphic workshop
+Autorzy: Misha Mahowald’s
+O czym:  stereo fusion work at Caltech in Carver Mead's Physics of Computation lab
+Notatki: Nope Nope Nope
+
+----------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------
+Nazwa: https://briansimulator.org/
+Tytuł: Brian SNN Simulator
+Autorzy: ---
+O czym: Symulator sieci SNN
+Notatki:
+
+=> Sieci SNN są bardzo ciekawe, ale mogą być duże problemy z uczeniem
+Wniosek: Może lepiej nie.
+----------------------------------------------------------------------------------------------
+
+
 ----------------------------------------------------------------------------------------------
 Nazwa: https://www.frontiersin.org/articles/10.3389/fnins.2018.00774/full
 Tytuł: Deep Learning With Spiking Neurons: Opportunities and Challenges
@@ -323,10 +344,39 @@ czy hamująca, siła synaps i możliwa krótkoterminowa plastyczność lub efekt
 => Są EVENT -BASED urra!!!
 ----------------------------------------------------------------------------------------------
 
-----------------------------------------------------------------------------------------
-Nazwa: 
-Tytuł:
-Autorzy:
-O czym:
+---------------------------------------------------------------------------------------------
+Nazwa: 20576
+Tytuł: SMARTCAM FOR REAL-TIME STEREO VISION - Address-event Based Embedded System
+Autorzy: Stephan Schraml, Peter Schön and Nenad Milosevic
+O czym: Estymacja mapy głębi ruszającego się obiektu przy życiu kamery SMART
 Notatki:
+=> Dane w formacie AER - Address-Event Representation
+=> Realizacja na Embedded
+
+-> 2 kamery, kolejka FIFO i procesor DSP
+
+=> Algorytm:
+-> 3 kroki : 
+	1) kalibracja kamery oraz rektyfikacja
+	2) Wyliczenie korespondencji stereo
+	3) Rekonstrukcja
+	
+=> AE - Address-Event (x,y,t,p)
+	
+-> Wyliczenie parametrów wewnętrznych, zewnętrznych i położenia linii epipolarnych
+kamer dokonano przy pomocy Camera Calibration Toolbox korzystającego z nieliniowej funkcji spadku gradientu
+-> Bazując na wynikach kalibracji generuje się macierz przemieszczeń (warp matrix) i
+adresy Xtev Ytev każdego AE (czyli piksela) są poprawiane w locie by wyeliminować dystorsję i
+uzyskać linie epipolarne równoległe do osii poziomej (czyli układ kanoniczny pewnie)
+
+-> Korespondencje stereo wyznaczono używając standardowego (xD) area-based algorytmu modyfikując/readaptując
+w celu uzyskania korzyści z AE-based przetwarzania.  Algorytm kojarzący jest aplikowany do każdego zdarzenia
+kumulowanego w slocie czasowym o czasie trwania DT
+Tak więc aktywność zdarzeniowa (event-activity) wektora pikseli jest przechowywana w formie dynamicznej listy gdzie
+częstotliwość zdarzeń jest kodowana w wielkości (magnitude) AEact. Slot czasowy długości DT jest zmienną parametryczną
+i może być dobrana, typowo 5ms do 50ms - odpowiedno 200 i 20 fps. Zaczynając od pierwszego aktywnego piksela w lewym obrazku
+algorytm szuka najlepszego kandydata w obrazie lewym  używając metryki podobieństwa w przedziale rozbieżności pomiędzy dmin i dmax.
+Proces jest następny przetwarzany dla kolejnych AE
+
+
 ----------------------------------------------------------------------------------------------
