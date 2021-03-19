@@ -1,0 +1,12 @@
+=> Instalacja ROS Kinematic - bezproblemowa
+
+=> Instalacja ESIM:
+-> Brak zainstalowanego domyślnie catkin, należało doinstalować:
+$ sudo apt-get install ros-kinetic-catkin python-catkin-tools 
+
+-> Konieczność dodania klucza SSH do konta GitHub
+-> Konieczność instalacji autoconf:
+$sudo apt install autoconf
+
+=> Planar Renderer test:
+-> Zmiana ścieżek na odpowiednie w cfg/example.conf
