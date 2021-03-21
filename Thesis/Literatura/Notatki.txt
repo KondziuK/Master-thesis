@@ -377,6 +377,84 @@ częstotliwość zdarzeń jest kodowana w wielkości (magnitude) AEact. Slot cza
 i może być dobrana, typowo 5ms do 50ms - odpowiedno 200 i 20 fps. Zaczynając od pierwszego aktywnego piksela w lewym obrazku
 algorytm szuka najlepszego kandydata w obrazie lewym  używając metryki podobieństwa w przedziale rozbieżności pomiędzy dmin i dmax.
 Proces jest następny przetwarzany dla kolejnych AE
+----------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------
+Nazwa: CORL18_Rebecq
+Tytuł: ESIM: an Open Event Camera Simulator
+Autorzy: Henri Rebecq, Daniel Gehrig, Davide Scaramuzza
+O czym: Symulator ESIM
+Notatki:
+
+=> IMU - Inertial Measurement Unit - nawigacja inercyjna
+
+=> Brak stasłego framerate`u -  adaptuje się stosownie do przewidywanych zmian (dynamics) sygnału
+
+-> Rendering engine - oprogramowanie odpowiadające za przetwarzanie zawartości i wyświetlanie tekstu, obrazów na ekranie
+
+=> Irradiance map - Kolekcja punktów w przestrzeni 3D z obliczonym oświetleniem pośrednim w tych punktach
+
+=> Motion Field Map - projekcja 3D relatywnych wektorów ruchu na płaszczyznę 3D. Podobne do Przepływu Optycznego (Optical Flow),
+ a w zadzie PO jest aproksymacją MF. (źródło : wikipedia). W symulatorze używane do obliczenia spodziewanej zmiany natężenia światła.
 
 
+
+=> Elementy składowe symulatora:
+1) Sensor ruchu (Sensor trajectory) - funkcja regularna Tau (smooth function) która mapuje każdą chwilę czasową t do pozycji sensora,
+skrętu (prędkości kątowej oraz liniowej) oraz przyspieszenia. Zgodnie z jakąś tam publikacją oznacza się tą pozycję czujnika wyrażoną
+w jakimś układzie inercjalnym jako Tw(t) dla ramki W (tutaj dużo zagnieżdżeń), skręt jako Theta(t) a przyspieszenie jako Ba(t).
+2) Silnik wyświetlania (rendering engine) - Renderer to funkcja R która mapuje dowolną chwilę czasową t do zrenderowanego obrazu
+(albo irradiancji E [strumień promieniowania na jednostkę powierchni]) sceny dla obecnej pozycji sensora. Renderer jest parametryzowany
+poprzez środowisko Eta, trajektorię sensora wewnątrz środowiska Tau i konfigurację sensora Omega. Eta kontroluje geometrię sceny jak i jej
+zmienność (np. pokój, miasto z samochodami etc). Tau reprezentuje trajektorię kamery wewnątrz środowiska które może być generowane online na podstawie
+dynamicznego modelu robota i zestawu funkcji kontrolujących albo prekomputowana offline. Omega reprezentuje konfigurację wirtualnego sensora na którego składają się
+parametry wewnętrzne oraz zewnętrzne. Zawiera także parametry specyficzne dla sensora (np. threshold C). Renderer dodatkowo zapewnia pole ruchu V(t).
+
+
+=> Adaptacyjne techniki próbkowania (Adaptive Sampling Strategies):
+-> Bazujące na zmianie jasności (Brightness Change)
+Korzystamy z rozwinięcia w szereg Taylora dla kolejnej chwili tk+1 przy wiedzy z Pola Ruchu (Motion Field)
+-> Bazujące na rozmieszczeniu pikseli (Pixel Displacement)
+Metoda prostsza bazuje na zapewnieniu ograniczenia maksymalnego przemieszczenia piksela pomiędzy dwiema kolejnymi próbkami (renderowanymi klatkami) 
+[Tak zdaje się działa symulator v2e].
+
+=> Jest implementacja szumu
+
+=>Testy:
+Nie jest idealnie, powody są głównie dwa:
+1) Prawdziwy i symulowany setup nie są identyczne :threshold C i poziomy szumu nie są do końca znane 
+oraz pozycja i tesktura plakatu nie odpowiadają rzeczywistemu plakatowi używanemu w bazie danych
+2) Symulaator używa prostego modelu szumu który nie jest super dokładny
+
+=> Przykładowa aplikacja: Uczenie nadzorowane Przepływu Optycznego
+
+=> Materiał uzupełniający:
+
+A) Trajekotria Sensora (Sensor Trajectory): 
+Używamy funkcji ciągłej czasy bazującej na funkcji sklejanej. Użytkownik może wygenerować randomową trajektorię albo załadować
+ją z pliku zawierającą dyskretny zestaw póz kamery.
+
+B) Silniki Wyświetlania (Rendering Engines):
+- Jest ich kilka
+	1) OpenGL Rendering Engine - bazuje na OpenGL tj. na rasteryzacji, implementowany na GPU. Przeznaczony do symulacji dużych ilości
+	danych w sposób szybki za cenę symulacji w 3D tylko prostych scen z teksturami.
+
+	2) Photorealistic Rendering Engine - Bazuje na Unreal Engine poprzez projekt UnrealCV
+	[open sourcowy projekt do pomocy badaczom sytstemów wizyjnych w budowaniu światów przy użyciu UE]. Fotorealistyczny, ale powolny.
+
+C) Wyliczenie Pola Ruchu (Computation of Motion Field)
+
+D) Dodatkowe Sensory:
+	1) Standardowa Kamera
+	2) IMU
+
+Kuniec.
+
+----------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+Nazwa:
+Tytuł: 
+Autorzy: 
+O czym: 
+Notatki:
 ----------------------------------------------------------------------------------------------
