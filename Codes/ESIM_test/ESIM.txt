@@ -10,3 +10,8 @@ $sudo apt install autoconf
 
 => Planar Renderer test:
 -> Zmiana ścieżek na odpowiednie w cfg/example.conf
+
+
+=> Zamiana filmu na eventy:
+-> Operowanie ROS - upierdliwe
+-> Wynik plik - .bag, możliwa wizualizacja (image.png), ale zapis do filmu nieodkryty
