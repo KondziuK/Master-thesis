@@ -452,6 +452,71 @@ Kuniec.
 
 ----------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------
+Nazwa: SpikingReconstruction
+Tytuł: A spiking neural network model of 3D perception for event-based neuromorphic stereo vision systems
+Autorzy: Marc Osswald, Sio-Hoi Ieng, Ryad Benosman & Giacomo Indiveri1
+O czym: Sieci impulsowe do rekonstrukcji 3D I guess
+Notatki:
+=> Używamy sieci impulsowej do wyznaczania korespondencji stereo
+=> Von Neumann bottleneck - zjawisko ograniczenia wydajności poprzez arcihtekturę sprzętu
+(np. ograniczenie wydajności GPU poprzez źle dobraną płytę główną)
+
+=> Koincydencja (coincidence) w neurobiologii - process w wyniku
+którego neuron albo ich populacja koduje informację, wykrywając
+wystąpienie czasowo bliskich ale przestrzennie rozmieszczonych sygnałów wejściowych
+
+=> Użyta sieć impulsowa:
+	1) Wejście sieci - dane przestrzenno - czasowe w formie impulsów uzyskane ze zdarzeń
+	2) Sieć składa się z neuronów typu Integrate-and-Fire pracujących równolegle
+	4) 1 warstwa symbolizuje komórki siatkówki oka
+	5) 2 warstwa to detektory koincydencji (coincidence vectors)
+	3) 3 Warstwa neuronów to detektory dyspaarycji
+=> Zasada działania tej sieci impulsowej:
+Obiekt jest wykrywany przez parę oczu i rzutowany na komórki 
+siatkówki oka. Impulsy (piki) z nich są czasoprzestrzennie skorelowane (detektory koincydencji) i zintegrowane 
+(detektory dysparycji).Dla każdej pary odpowiadających sobie poziomych linii komórek siatkówki, pozioma warstwa neuronów koincydencji sygnalizuje czasowo zbieżne skoki. Komórki te są
+tak zorganizowane, że każda z nich ma unikalną reprezentaację w przestrzeni dysparycji, tak że każdy pik przekazuje dane o potencjalnym celu dla odpowiadającego pozycji dysparycji w prawdziwym świecie. 
+Końcowe wyjście koduje reprezentację 
+odczytanej sceny w przestrzeni dysparycji (x, y, d). Odpowiadające
+koincydencji oraz dysparycji detektory leżą na linii poziomej. 
+
+=> Implementacja na procesorze ROLLS
+
+=> Nawet działało podobno
+
+Nic z tego nie rozumiem...
+----------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+Nazwa: EventBasedReconstruction3Cameras
+Tytuł: Event-based 3D reconstruction from neuromorphic retinas
+Autorzy: João Carneiro , Sio-Hoi Ieng , Christoph Posch , Ryad Benosman
+O czym: Rekontrukcja 3D przy pomocy 3 kamer???
+Notatki:
+
+=> 3 kamery, zostawiam na dalszy plan
+----------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+Nazwa: Asynchronous Event-Based Binocular Stereo Matching
+Tytuł: EventBasedReconstruction2Cameras
+Autorzy: Paul Rogister, Ryad Benosman, Sio-Hoi Ieng,Patrick Lichtsteiner, and Tobi Delbruck
+O czym: Rekonstrukcja 3D przy pomocy 2 kamer
+Notatki:
+-> AER - Address-Event Representation
+-> DVS - Dynamic Vision Sensor
+-> Używali DVS 128 x 128
+
+-> Warto pamiętać, że chwila t zmiany natężenia światła w realnym świecie  =/= chwili t w kamerze, mamy (niewielkie) opóźnienie
+
+=> Dwa zdarzenia odpowiadające temu samemu obiektowi nie pojawiają 
+się w obydwu kamerach, jednocześnie
+
+=> Wyznaczymy dla każdego zdarzenia w jednej kamerze liniię
+epipolarną, zliczamy event w dt i sprawdzamy ile z nich było oddalonych od linii epipolarnej o dp i voula - mamy odpowiadające piksele
+
+==> Bardzo obiecująca praca
+
+----------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 Nazwa:
 Tytuł: 
 Autorzy: 
