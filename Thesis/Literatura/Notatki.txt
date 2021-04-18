@@ -515,6 +515,31 @@ epipolarną, zliczamy event w dt i sprawdzamy ile z nich było oddalonych od lin
 
 ==> Bardzo obiecująca praca
 
+<<<<<<< Updated upstream
+=======
+
+----------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+Nazwa: DataSet
+Tytuł: The Multi Vehicle Stereo Event Camera Dataset: An Event Camera Dataset for 3D Perception
+Autorzy: Alex Zihao Zhu1, Dinesh Thakur1, Tolga O¨ zaslan1, Bernd Pfrommer1, Vijay Kumar1 and Kostas Daniilidis
+O czym: Dataset stereo
+Notatki:
+
+https://daniilidis-group.github.io/mvsec/calibration_format/
+
+-> Kamery - mDavis-346B (346 x 260)
+-> Dodatkowo Lidar
+-> Sekwencje:
+	A) Hexacopter
+	B) Handheld
+	C) Car
+	D) Motorcycle
+
+-> Kalibracja - format yaml
+
+
+>>>>>>> Stashed changes
 ----------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------
 Nazwa:

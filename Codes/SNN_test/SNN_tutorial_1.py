@@ -54,7 +54,7 @@ from brian2 import *
 #
 # show()
 
-## Multiple neurons
+# Multiple neurons
 start_scope()
 
 N = 100 # Number of neurons
@@ -97,19 +97,19 @@ print(f"firing rate is {rate:.2f} Hz")
 show()
 
 ## Parameters
-# start_scope()
-#
-# N = 100
-# tau = 10 * ms
-# v0_max = 3.0
-# duration = 1000 * ms
-#
-# eqs = '''
-# dv/dt = (v0-v)/tau : 1 (unless refractory)
-# v0 : 1
-# '''
-# ## v0 :1 - dimensionless
-#
+start_scope()
+
+N = 100
+tau = 10 * ms
+v0_max = 3.0
+duration = 1000 * ms
+
+eqs = '''
+dv/dt = (v0-v)/tau : 1 (unless refractory)
+v0 : 1
+'''
+## v0 :1 - dimensionless
+
 # G = NeuronGroup(N, eqs, threshold = 'v > 1', reset = 'v = 0', refractory = '5*ms', method = 'exact')
 # spikemon = SpikeMonitor(G)
 #

@@ -3,6 +3,12 @@
 *ckpt
 *avi
 *mov
+*bag
 *.idea/
 Codes/v2e_test/v2e/
+<<<<<<< Updated upstream
+=======
+Codes/MVSEC/
+Codes/ESIM_test/events.txt
+>>>>>>> Stashed changes
 !EventBasedReconstruction2Cameras.pdf

@@ -1,14 +1,14 @@
 from brian2 import *
 
 ## Simplest synapse
-# start_scope()
-#
-# eqs = '''
-# dv/dt = (I-v)/tau : 1
-# I : 1
-# tau : second
-# '''
-#
+start_scope()
+
+eqs = '''
+dv/dt = (I-v)/tau : 1
+I : 1
+tau : second
+'''
+
 # G = NeuronGroup(3, eqs, threshold= 'v>1', reset= 'v=0', method= 'exact')
 # G.I = [2, 0, 0]
 # G.tau = [10, 100, 100]* ms
@@ -30,7 +30,7 @@ from brian2 import *
 # legend()
 #
 # show()
-
+#
 # ## Synapses with delay
 # start_scope()
 #
@@ -91,7 +91,7 @@ def visualise_connectivity(S: Synapses, titl: str = '') -> None:
     ylabel('Target Neuron index')
 #
 # start_scope()
-#
+
 # N = 10
 # G = NeuronGroup(N, 'v:1')
 # S = Synapses(G, G)
@@ -106,7 +106,8 @@ def visualise_connectivity(S: Synapses, titl: str = '') -> None:
 #     S = Synapses(G,G)
 #     S.connect(condition='i!=j', p=p)
 #     visualise_connectivity(S,'p = ' +str(p))
-#
+# show()
+
 #
 # start_scope()
 #
@@ -172,15 +173,15 @@ def visualise_connectivity(S: Synapses, titl: str = '') -> None:
 
 ## More complex synapse models : STDP
 
-tau_pre = tau_post = 20 * ms
-A_pre = 0.01
-A_post = -A_pre * 1.05
-delta_t = linspace(-50, 50,100) * ms
-W = where(delta_t > 0, A_pre * exp(-delta_t/tau_pre), A_post * exp(delta_t/tau_post))
-plot(delta_t/ms, W)
-xlabel(r'%\Delta t (ms)')
-ylabel('W')
-axhline(0, ls='-', c='k')
+# tau_pre = tau_post = 20 * ms
+# A_pre = 0.01
+# A_post = -A_pre * 1.05
+# delta_t = linspace(-50, 50,100) * ms
+# W = where(delta_t > 0, A_pre * exp(-delta_t/tau_pre), A_post * exp(delta_t/tau_post))
+# plot(delta_t/ms, W)
+# xlabel(r'%\Delta t (ms)')
+# ylabel('W')
+# axhline(0, ls='-', c='k')
 
 
 # start_scope()
@@ -225,47 +226,47 @@ axhline(0, ls='-', c='k')
 
 # Veryfing simulation
 
-start_scope()
-
-taupre = taupost = 20 * ms
-Apre = 0.01
-Apost = -Apre * taupre / taupost * 1.05
-tmax = 50 * ms
-N = 50
-
-# Presynaptic neurons G spike at time form 0 to tmax
-# Postsynaptic neurons H spike at times from tmax to 0
-# So difference in spike times will vary from tmax to +tmax
-G = NeuronGroup(N, 'tspike:second', threshold='t>tspike', refractory=100*ms)
-H = NeuronGroup(N, 'tspike:second', threshold='t>tspike', refractory=100*ms)
-
-G.tspike = 'i*tmax/(N-1)'
-H.tspike = '(N-1-i)*tmax/(N-1)'
-
-S = Synapses(G, H,
-             '''
-             w : 1
-             dapre/dt = -apre/taupre : 1 (event-driven)
-             dapost/dt = -apost/taupost : 1 (event-driven)
-             ''',
-             on_pre ='''
-             apre += Apre
-             w = w+ apost
-             ''',
-             on_post='''
-             apost += Apost
-             w = w +apre
-             ''' )
-S.connect(j='i')
-visualise_connectivity(S)
-run(tmax+ 1*ms)
-plot((H.tspike-G.tspike)/ms, S.w)
-xlabel(r'$\Delta t$ (ms)')
-ylabel(r'$\Delta w$')
-axhline(0, ls='-', c='k')
-print(G.tspike)
-print(H.tspike)
-show()
+# start_scope()
+#
+# taupre = taupost = 20 * ms
+# Apre = 0.01
+# Apost = -Apre * taupre / taupost * 1.05
+# tmax = 50 * ms
+# N = 50
+#
+# # Presynaptic neurons G spike at time form 0 to tmax
+# # Postsynaptic neurons H spike at times from tmax to 0
+# # So difference in spike times will vary from tmax to +tmax
+# G = NeuronGroup(N, 'tspike:second', threshold='t>tspike', refractory=100*ms)
+# H = NeuronGroup(N, 'tspike:second', threshold='t>tspike', refractory=100*ms)
+#
+# G.tspike = 'i*tmax/(N-1)'
+# H.tspike = '(N-1-i)*tmax/(N-1)'
+#
+# S = Synapses(G, H,
+#              '''
+#              w : 1
+#              dapre/dt = -apre/taupre : 1 (event-driven)
+#              dapost/dt = -apost/taupost : 1 (event-driven)
+#              ''',
+#              on_pre ='''
+#              apre += Apre
+#              w = w+ apost
+#              ''',
+#              on_post='''
+#              apost += Apost
+#              w = w +apre
+#              ''' )
+# S.connect(j='i')
+# visualise_connectivity(S)
+# run(tmax+ 1*ms)
+# plot((H.tspike-G.tspike)/ms, S.w)
+# xlabel(r'$\Delta t$ (ms)')
+# ylabel(r'$\Delta w$')
+# axhline(0, ls='-', c='k')
+# print(G.tspike)
+# print(H.tspike)
+# show()
 
 
 
